@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP: Title + instructions -->
+  <header class="site-header">
+    <h1 class="site-title">Find Your Seat</h1>
+    <p class="site-instructions">Type your name to find your table.</p>
+  </header>
+
+  <!-- SEARCH -->
+  <section class="search-section">
+    <form class="search-form" id="search-form" role="search">
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Your name..."
+        autocomplete="off"
+        aria-label="Search for your name"
+      />
+      <button type="submit" class="search-btn">Find My Seat</button>
+    </form>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results-section" id="results-section" aria-live="polite" hidden>
+    <div class="results-inner" id="results-inner"></div>
+  </section>
+
+  <!-- FULL TABLE LIST -->
+  <section class="full-list-section">
+    <h2 class="full-list-heading">All Tables</h2>
+    <div class="full-list" id="full-list"></div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
