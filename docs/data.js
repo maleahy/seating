@@ -1,9 +1,10 @@
 const GUESTS = [
   { name: "Maleah Yee", table: 1, related: [] },
-  { name: "Joshua Perkins", table: 1, related: [] },
+  { name: "Joshua Perkins", table: 2, related: [] },
   { name: "Alana Yee", table: 1, related: [] },
   { name: "Carly Chen", table: 1, related: [] },
-  { name: "Irene Park", table: 1, related: [] },
+    { name: "Irene Park", table: 1, related: [] },
+    { name: "Shannon Liu", table: 1, related: [] },
   { name: "Christian Kim", table: 1, related: [] },
   { name: "Trigg Randall", table: 2, related: [] },
   { name: "Ryan Morrow", table: 2, related: [] },
