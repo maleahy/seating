@@ -105,6 +105,17 @@ body {
   opacity: 0.88;
 }
 
+/* ── Seating Diagram ── */
+.diagram-container {
+  margin-bottom: 1.25rem;
+}
+
+.diagram-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── Results ── */
 .results-section {
   max-width: var(--max-width);
