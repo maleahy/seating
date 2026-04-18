@@ -72,10 +72,12 @@ function renderSeatingDiagram(highlightTable) {
     const cx = x + w / 2;
     const cy = y + h / 2;
     return `
-      <rect x="${x}" y="${y}" width="${w}" height="${h}"
-        fill="${fill}" stroke="${stroke}" stroke-width="1.5" rx="2"/>
-      <text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle"
-        font-size="13" font-family="var(--font-body)" fill="${text}">${num}</text>`;
+      <g onclick="showResults(renderTableResult(${num}))" style="cursor:pointer">
+        <rect x="${x}" y="${y}" width="${w}" height="${h}"
+          fill="${fill}" stroke="${stroke}" stroke-width="1.5" rx="2"/>
+        <text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle"
+          font-size="13" font-family="var(--font-body)" fill="${text}">${num}</text>
+      </g>`;
   }).join('');
 
   return `<div class="diagram-container">
@@ -154,7 +156,7 @@ function renderFullList() {
 
   let html = '';
   for (const [tableNum, names] of tables) {
-    html += `<div class="table-card" data-table="${tableNum}" tabindex="0" role="button" aria-label="Table ${tableNum}">`;
+    html += `<div class="table-card" data-table="${tableNum}" tabindex="0" role="button" aria-label="Table ${tableNum}" onclick="showResults(renderTableResult(${tableNum}))">`;
     html += `<p class="table-card-number">Table ${tableNum}</p>`;
     html += `<ul class="table-card-names">`;
     for (const name of names) {
