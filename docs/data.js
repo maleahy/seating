@@ -41,7 +41,7 @@ const GUESTS = [
   { name: "Makai Yee", table: 8, related: [] },
   { name: "Jennifer Yee", table: 8, related: [] },
   { name: "Michael Papillo", table: 8, related: [] },
-  { name: "Emily Perkins", table: 8, related: ["Ute Perkins","Jessica Perkins","Rebecca Perkins","Matthew Perkins","Jessica Perkins"] },
+  { name: "Emily Perkins", table: 8, related: ["Ute Perkins","Rebecca Perkins","Rebecca Perkins","Matthew Perkins","Jessica Perkins"] },
   { name: "Alvin Yee", table: 9, related: [] },
   { name: "Faye Yee", table: 9, related: [] },
   { name: "Spencer Yee", table: 9, related: ["Callie Yee", "Kendall Yee"] },
