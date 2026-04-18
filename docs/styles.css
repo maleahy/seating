@@ -283,8 +283,8 @@ body {
   .search-input {
     max-width: 100%;
     flex-basis: auto;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .full-list {
     grid-template-columns: 1fr 1fr;
