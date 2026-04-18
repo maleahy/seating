@@ -40,7 +40,7 @@ function renderSeatingDiagram(highlightTable) {
   // Grid rects are landscape (78×38); right column rects are portrait/rotated (38×78)
   const tables = [
     // Right column: tables 1-2, portrait orientation (rotated 90°)
-    [1, 330, 133, 38, 78],  // bottom
+    [1, 330,  78, 38, 78],  // bottom
     [2, 330,  0, 38, 78],  // top
     // Grid bottom row (tables 3-6), flush horizontally
     [3,   8, 203, 78, 38],
