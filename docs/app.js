@@ -154,7 +154,7 @@ function renderFullList() {
 
   let html = '';
   for (const [tableNum, names] of tables) {
-    html += `<div class="table-card">`;
+    html += `<div class="table-card" data-table="${tableNum}" tabindex="0" role="button" aria-label="Table ${tableNum}">`;
     html += `<p class="table-card-number">Table ${tableNum}</p>`;
     html += `<ul class="table-card-names">`;
     for (const name of names) {
@@ -164,6 +164,19 @@ function renderFullList() {
   }
 
   container.innerHTML = html;
+}
+
+function renderTableResult(tableNum) {
+  const guests = getTablemates(tableNum);
+  let html = '';
+  html += renderSeatingDiagram(tableNum);
+  html += `<p class="result-table-number">Table ${tableNum}</p>`;
+  html += `<ul class="result-names-list">`;
+  for (const g of guests) {
+    html += `<li>${escapeHtml(g.name)}</li>`;
+  }
+  html += `</ul>`;
+  return html;
 }
 
 // ── Events ──
@@ -197,6 +210,22 @@ document.getElementById('results-inner').addEventListener('click', function (e) 
 document.getElementById('results-inner').addEventListener('keydown', function (e) {
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const card = e.target.closest('.match-card');
+  if (!card) return;
+  e.preventDefault();
+  card.click();
+});
+
+document.getElementById('full-list').addEventListener('click', function (e) {
+  const card = e.target.closest('.table-card');
+  if (!card) return;
+  const tableNum = parseInt(card.dataset.table, 10);
+  if (isNaN(tableNum)) return;
+  showResults(renderTableResult(tableNum));
+});
+
+document.getElementById('full-list').addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const card = e.target.closest('.table-card');
   if (!card) return;
   e.preventDefault();
   card.click();
