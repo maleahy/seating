@@ -282,6 +282,8 @@ body {
   }
   .search-input {
     max-width: 100%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
   }
   .full-list {
     grid-template-columns: 1fr 1fr;
