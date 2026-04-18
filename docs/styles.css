@@ -61,7 +61,7 @@ body {
 .search-section {
   max-width: var(--max-width);
   margin: 0 auto 2rem;
-  padding: 0 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .search-form {
