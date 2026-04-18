@@ -283,7 +283,7 @@ body {
   .search-input {
     max-width: 100%;
     flex-basis: auto;
-    padding-top: 0.5rem;
+    padding-top: 0.55rem;
     padding-bottom: 0.5rem;
   }
   .full-list {

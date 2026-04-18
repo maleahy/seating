@@ -94,5 +94,5 @@ const GUESTS = [
   { name: "Dallin Moody", table: 18, related: [] },
   { name: "Lily Hansen", table: 18, related: [] },
   { name: "Kris Pauni", table: 18, related: [] },
-  { name: "Krenna Pauni", table: 18, related: [] },
+  { name: "Trenna Pauni", table: 18, related: [] },
 ];
