@@ -263,7 +263,7 @@ body {
   }
   .search-input {
     max-width: 100%;
-    height: 6.4rem;
+    height: 3rem;
   }
   .full-list {
     grid-template-columns: 1fr 1fr;
