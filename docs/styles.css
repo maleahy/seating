@@ -244,6 +244,12 @@ body {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.table-card:hover {
+  border-color: var(--color-accent);
 }
 
 .table-card-number {
