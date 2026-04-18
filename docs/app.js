@@ -40,28 +40,28 @@ function renderSeatingDiagram(highlightTable) {
   // Grid rects are landscape (78×38); right column rects are portrait/rotated (38×78)
   const tables = [
     // Right column: tables 1-2, portrait orientation (rotated 90°)
-    [1, 370, 133, 38, 78],  // bottom
-    [2, 370,  38, 38, 78],  // top
-    // Grid bottom row (tables 3-6)
+    [1, 330, 133, 38, 78],  // bottom
+    [2, 330,  38, 38, 78],  // top
+    // Grid bottom row (tables 3-6), flush horizontally
     [3,   8, 203, 78, 38],
-    [4,  96, 203, 78, 38],
-    [5, 184, 203, 78, 38],
-    [6, 272, 203, 78, 38],
+    [4,  86, 203, 78, 38],
+    [5, 164, 203, 78, 38],
+    [6, 242, 203, 78, 38],
     // Grid row 2 (tables 7-10)
     [7,   8, 138, 78, 38],
-    [8,  96, 138, 78, 38],
-    [9, 184, 138, 78, 38],
-    [10, 272, 138, 78, 38],
+    [8,  86, 138, 78, 38],
+    [9, 164, 138, 78, 38],
+    [10, 242, 138, 78, 38],
     // Grid row 3 (tables 11-14)
     [11,  8,  73, 78, 38],
-    [12, 96,  73, 78, 38],
-    [13,184,  73, 78, 38],
-    [14,272,  73, 78, 38],
+    [12, 86,  73, 78, 38],
+    [13,164,  73, 78, 38],
+    [14,242,  73, 78, 38],
     // Grid top row (tables 15-18)
     [15,  8,   8, 78, 38],
-    [16, 96,   8, 78, 38],
-    [17,184,   8, 78, 38],
-    [18,272,   8, 78, 38],
+    [16, 86,   8, 78, 38],
+    [17,164,   8, 78, 38],
+    [18,242,   8, 78, 38],
   ];
 
   const rects = tables.map(([num, x, y, w, h]) => {
@@ -81,7 +81,7 @@ function renderSeatingDiagram(highlightTable) {
   }).join('');
 
   return `<div class="diagram-container">
-    <svg viewBox="0 0 416 249" xmlns="http://www.w3.org/2000/svg" aria-label="Seating floor plan">
+    <svg viewBox="0 0 376 249" xmlns="http://www.w3.org/2000/svg" aria-label="Seating floor plan">
       ${rects}
     </svg>
   </div>`;
