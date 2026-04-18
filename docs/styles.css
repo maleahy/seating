@@ -263,12 +263,12 @@ body {
   }
   .search-input {
     max-width: 100%;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
   .search-btn {
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
   .full-list {
     grid-template-columns: 1fr 1fr;
