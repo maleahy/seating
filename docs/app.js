@@ -219,6 +219,7 @@ document.getElementById('full-list').addEventListener('click', function (e) {
   const card = e.target.closest('.table-card');
   if (!card) return;
   const tableNum = parseInt(card.dataset.table, 10);
+  if (isNaN(tableNum)) return;
   showResults(renderTableResult(tableNum));
 });
 
