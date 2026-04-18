@@ -36,6 +36,44 @@ body {
   padding: 4rem 1rem 4rem;
 }
 
+/* ── Banner ── */
+.site-banner {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.75rem 3rem 0.75rem 1.25rem;
+  text-align: center;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.site-banner[hidden] {
+  display: none;
+}
+
+.banner-text {
+  margin: 0;
+}
+
+.banner-close {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  opacity: 0.8;
+  line-height: 1;
+}
+
+.banner-close:hover {
+  opacity: 1;
+}
+
 /* ── Header ── */
 .site-header {
   text-align: center;
