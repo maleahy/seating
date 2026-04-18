@@ -35,11 +35,61 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+function renderSeatingDiagram(highlightTable) {
+  // Each entry: [tableNum, x, y, width, height]
+  const tables = [
+    // Bottom row
+    [1,   8, 203, 78, 38],
+    [2,  96, 203, 78, 38],
+    [3, 184, 203, 78, 38],
+    [4, 272, 203, 78, 38],
+    // Row 2
+    [5,   8, 138, 78, 38],
+    [6,  96, 138, 78, 38],
+    [7, 184, 138, 78, 38],
+    [8, 272, 138, 78, 38],
+    // Row 3
+    [9,   8,  73, 78, 38],
+    [10,  96,  73, 78, 38],
+    [11, 184,  73, 78, 38],
+    [12, 272,  73, 78, 38],
+    // Top row
+    [13,  8,   8, 78, 38],
+    [14,  96,   8, 78, 38],
+    [15, 184,   8, 78, 38],
+    [16, 272,   8, 78, 38],
+    // Right column (tall vertical rects)
+    [17, 382, 138, 58, 103],
+    [18, 382,  28, 58, 103],
+  ];
+
+  const rects = tables.map(([num, x, y, w, h]) => {
+    const isHighlight = num === highlightTable;
+    const fill   = isHighlight ? 'var(--color-accent)' : 'var(--color-card)';
+    const text   = isHighlight ? '#fff' : 'var(--color-text)';
+    const stroke = isHighlight ? 'var(--color-accent)' : 'var(--color-border)';
+    const cx = x + w / 2;
+    const cy = y + h / 2;
+    return `
+      <rect x="${x}" y="${y}" width="${w}" height="${h}"
+        fill="${fill}" stroke="${stroke}" stroke-width="1.5" rx="2"/>
+      <text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="middle"
+        font-size="13" font-family="var(--font-body)" fill="${text}">${num}</text>`;
+  }).join('');
+
+  return `<div class="diagram-container">
+    <svg viewBox="0 0 448 249" xmlns="http://www.w3.org/2000/svg" aria-label="Seating floor plan">
+      ${rects}
+    </svg>
+  </div>`;
+}
+
 function renderSingleResult(guest) {
   const tablemates = getTablemates(guest.table);
   const relatedByTable = getRelatedByTable(guest.related);
 
   let html = '';
+  html += renderSeatingDiagram(guest.table);
   html += `<p class="result-match-name">${escapeHtml(guest.name)}</p>`;
   html += `<p class="result-table-number">Table ${guest.table}</p>`;
 
