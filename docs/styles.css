@@ -37,44 +37,6 @@ body {
 }
 
 /* ── Banner ── */
-.site-banner {
-  background: #c8d6e1;
-  color: var(--color-text);
-  padding: 0.75rem 3rem 0.75rem 1.25rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.site-banner[hidden] {
-  display: none;
-}
-
-.banner-text {
-  margin: 0;
-}
-
-.banner-close {
-  position: absolute;
-  top: 50%;
-  right: 0.75rem;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--color-text);
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  opacity: 0.8;
-  line-height: 1;
-}
-
-.banner-close:hover {
-  opacity: 1;
-}
 
 /* ── Header ── */
 .site-header {
@@ -230,6 +192,16 @@ body {
 .related-table-label {
   font-size: 0.85rem;
   color: var(--color-muted);
+}
+
+.result-disclaimer {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-card);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .no-result-msg {

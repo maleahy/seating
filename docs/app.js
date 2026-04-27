@@ -14,6 +14,22 @@ function getTablemates(tableNum) {
   return GUESTS.filter(g => g.table === tableNum);
 }
 
+function getConsecutiveRuns(tableNums) {
+  const sorted = [...new Set(tableNums)].sort((a, b) => a - b);
+  const runs = [];
+  let run = [sorted[0]];
+  for (let i = 1; i < sorted.length; i++) {
+    if (sorted[i] === sorted[i - 1] + 1) {
+      run.push(sorted[i]);
+    } else {
+      if (run.length >= 2) runs.push(run);
+      run = [sorted[i]];
+    }
+  }
+  if (run.length >= 2) runs.push(run);
+  return runs;
+}
+
 function getRelatedByTable(relatedNames) {
   const byTable = new Map();
   for (const rName of relatedNames) {
@@ -114,6 +130,15 @@ function renderSingleResult(guest) {
         html += `<li>${escapeHtml(n)}</li>`;
       }
       html += `</ul></div>`;
+    }
+
+    const allTables = [guest.table, ...relatedByTable.keys()];
+    const runs = getConsecutiveRuns(allTables);
+    if (runs.length > 0) {
+      const runLabels = runs.map(r =>
+        r.length === 2 ? `Tables ${r[0]} and ${r[1]}` : `Tables ${r[0]}–${r[r.length - 1]}`
+      ).join(', ');
+      html += `<p class="result-disclaimer">${runLabels} are consecutive rows in the venue — your full party can sit together.</p>`;
     }
   }
 
