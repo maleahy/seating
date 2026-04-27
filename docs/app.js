@@ -138,7 +138,7 @@ function renderSingleResult(guest) {
       const runLabels = runs.map(r =>
         r.length === 2 ? `Tables ${r[0]} and ${r[1]}` : `Tables ${r[0]}–${r[r.length - 1]}`
       ).join(', ');
-      html += `<p class="result-disclaimer">${runLabels} are consecutive rows in the venue — your full party can sit together.</p>`;
+      html += `<p class="result-disclaimer">${runLabels} are consecutive rows in the venue — your full party can sit together. Feel free to swap seats within your party!</p>`;
     }
   }
 
