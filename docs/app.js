@@ -180,7 +180,7 @@ function renderFullList() {
   }
 
   let html = '';
-  for (const [tableNum, names] of tables) {
+  for (const [tableNum, names] of [...tables.entries()].sort((a, b) => a[0] - b[0])) {
     html += `<div class="table-card" data-table="${tableNum}" tabindex="0" role="button" aria-label="Table ${tableNum}" onclick="showResults(renderTableResult(${tableNum}))">`;
     html += `<p class="table-card-number">Table ${tableNum}</p>`;
     html += `<ul class="table-card-names">`;
