@@ -73,8 +73,6 @@ const GUESTS = [
   { name: "Beth Kolbe", table: 13, related: [] },
   { name: "Tom Kuo", table: 13, related: [] },
   { name: "Huong Do", table: 13, related: [] },
-  { name: "Brendan Kuo", table: 13, related: [] },
-  { name: "Haylee Sanchez", table: 13, related: [] },
   { name: "Michael Azarmi", table: 14, related: [] },
   { name: "Sarah Azarmi", table: 14, related: [] },
     { name: "Mia Kuo", table: 13, related: ["Sarah Azarmi", "Michael Azarmi"] },
