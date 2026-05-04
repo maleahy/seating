@@ -265,6 +265,8 @@ document.querySelector('.tab-nav').addEventListener('click', function (e) {
   const tab = btn.dataset.tab;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('tab-btn--active', b === btn));
   document.querySelectorAll('.tab-panel').forEach(p => { p.hidden = p.id !== `tab-${tab}`; });
+  document.querySelector('.site-title').textContent = btn.dataset.header;
+  document.querySelector('.site-instructions').textContent = btn.dataset.subheader;
 });
 
 // ── Init ──
