@@ -381,6 +381,39 @@ body {
   font-style: italic;
 }
 
+/* ── Things to Do ── */
+.things-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.things-list {
+  list-style: none;
+  padding: 0;
+}
+
+.things-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.things-item:last-child {
+  border-bottom: none;
+}
+
+.things-item-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.things-item-desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .search-form {
