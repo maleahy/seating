@@ -17,31 +17,92 @@
     <p class="site-instructions">Type your name to find your table.</p>
   </header>
 
-  <!-- SEARCH -->
-  <section class="search-section">
-    <form class="search-form" id="search-form" role="search">
-      <input
-        type="text"
-        id="search-input"
-        class="search-input"
-        placeholder="Your name..."
-        autocomplete="off"
-        aria-label="Search for your name"
-      />
-      <button type="submit" class="search-btn">Find My Seat</button>
-    </form>
-  </section>
+  <!-- TABS -->
+  <nav class="tab-nav" aria-label="Page sections">
+    <button class="tab-btn tab-btn--active" data-tab="seating">Seating</button>
+    <button class="tab-btn" data-tab="menu">Menu</button>
+  </nav>
 
-  <!-- RESULTS -->
-  <section class="results-section" id="results-section" aria-live="polite" hidden>
-    <div class="results-inner" id="results-inner"></div>
-  </section>
+  <!-- SEATING TAB -->
+  <div id="tab-seating" class="tab-panel">
 
-  <!-- FULL TABLE LIST -->
-  <section class="full-list-section">
-    <h2 class="full-list-heading">All Tables</h2>
-    <div class="full-list" id="full-list"></div>
-  </section>
+    <!-- SEARCH -->
+    <section class="search-section">
+      <form class="search-form" id="search-form" role="search">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Your name..."
+          autocomplete="off"
+          aria-label="Search for your name"
+        />
+        <button type="submit" class="search-btn">Find My Seat</button>
+      </form>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results-section" id="results-section" aria-live="polite" hidden>
+      <div class="results-inner" id="results-inner"></div>
+    </section>
+
+    <!-- FULL TABLE LIST -->
+    <section class="full-list-section">
+      <h2 class="full-list-heading">All Tables</h2>
+      <div class="full-list" id="full-list"></div>
+    </section>
+
+  </div>
+
+  <!-- MENU TAB -->
+  <div id="tab-menu" class="tab-panel" hidden>
+    <section class="menu-section">
+
+      <div class="menu-category">
+        <h3 class="menu-category-title">Mains</h3>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <span class="menu-item-name">Dan Dan Noodles</span>
+            <span class="menu-item-desc">Sesame-peanut sauce, cucumber, cilantro, crushed peanuts</span>
+          </li>
+          <li class="menu-item">
+            <span class="menu-item-name">Fried Popcorn Chicken and White Rice</span>
+            <span class="menu-item-desc">Jidori chicken, Thai basil, Taiwanese seasoning salt</span>
+            <span class="menu-item-tag">gluten free</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="menu-category-title">Sides</h3>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <span class="menu-item-name">Clamshell Buns</span>
+            <span class="menu-item-desc">Pork belly, assorted pickles, hoisin, crushed peanuts, and cilantro</span>
+          </li>
+          <li class="menu-item">
+            <span class="menu-item-name">Beef Rolls</span>
+            <span class="menu-item-desc">Braised five spice beef shank, cucumber, cilantro, scallions, hoisin</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h3 class="menu-category-title">Veggies</h3>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <span class="menu-item-name">Wok Tossed Basil Eggplant</span>
+          </li>
+          <li class="menu-item">
+            <span class="menu-item-name">Sautéed Seasonal Greens</span>
+            <span class="menu-item-desc">Bok-choy sautéed in a light garlic sauce</span>
+            <span class="menu-item-tag">gluten free &amp; vegan</span>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>

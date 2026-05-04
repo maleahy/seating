@@ -258,5 +258,14 @@ document.getElementById('full-list').addEventListener('keydown', function (e) {
   card.click();
 });
 
+// ── Tabs ──
+document.querySelector('.tab-nav').addEventListener('click', function (e) {
+  const btn = e.target.closest('.tab-btn');
+  if (!btn) return;
+  const tab = btn.dataset.tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('tab-btn--active', b === btn));
+  document.querySelectorAll('.tab-panel').forEach(p => { p.hidden = p.id !== `tab-${tab}`; });
+});
+
 // ── Init ──
 renderFullList();
