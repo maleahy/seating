@@ -10,141 +10,139 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+    <!-- TABS -->
+    <nav class="tab-nav" aria-label="Page sections">
+        <button class="tab-btn tab-btn--active" data-tab="seating" data-header="Find Your Seat" data-subheader="Type your name to find your table.">Seating</button>
+        <button class="tab-btn" data-tab="things" data-header="Things to Do" data-subheader="Join the fun!">Things to Do</button>
+        <button class="tab-btn" data-tab="menu" data-header="Today's Menu" data-subheader="Michelin Bib Gourmand Taiwanese cuisine">Menu</button>
+    </nav>
 
-  <!-- TOP: Title + instructions -->
-  <header class="site-header">
-    <h1 class="site-title">Find Your Seat</h1>
-    <p class="site-instructions">Type your name to find your table.</p>
-  </header>
+    <!-- TOP: Title + instructions -->
+    <header class="site-header">
+        <h1 class="site-title">Find Your Seat</h1>
+        <p class="site-instructions">Type your name to find your table.</p>
+    </header>
 
-  <!-- TABS -->
-  <nav class="tab-nav" aria-label="Page sections">
-    <button class="tab-btn tab-btn--active" data-tab="seating" data-header="Find Your Seat" data-subheader="Type your name to find your table.">Seating</button>
-    <button class="tab-btn" data-tab="things" data-header="Things to Do" data-subheader="Join the fun!">Things to Do</button>
-    <button class="tab-btn" data-tab="menu" data-header="Today's Menu" data-subheader="Michelin Bib Gourmand Taiwanese cuisine">Menu</button>
-  </nav>
 
-  <!-- SEATING TAB -->
-  <div id="tab-seating" class="tab-panel">
+    <!-- SEATING TAB -->
+    <div id="tab-seating" class="tab-panel">
 
-    <!-- SEARCH -->
-    <section class="search-section">
-      <form class="search-form" id="search-form" role="search">
-        <input
-          type="text"
-          id="search-input"
-          class="search-input"
-          placeholder="Your name..."
-          autocomplete="off"
-          aria-label="Search for your name"
-        />
-        <button type="submit" class="search-btn">Find My Seat</button>
-      </form>
-    </section>
+        <!-- SEARCH -->
+        <section class="search-section">
+            <form class="search-form" id="search-form" role="search">
+                <input type="text"
+                       id="search-input"
+                       class="search-input"
+                       placeholder="Your name..."
+                       autocomplete="off"
+                       aria-label="Search for your name" />
+                <button type="submit" class="search-btn">Find My Seat</button>
+            </form>
+        </section>
 
-    <!-- RESULTS -->
-    <section class="results-section" id="results-section" aria-live="polite" hidden>
-      <div class="results-inner" id="results-inner"></div>
-    </section>
+        <!-- RESULTS -->
+        <section class="results-section" id="results-section" aria-live="polite" hidden>
+            <div class="results-inner" id="results-inner"></div>
+        </section>
 
-    <!-- FULL TABLE LIST -->
-    <section class="full-list-section">
-      <h2 class="full-list-heading">All Tables</h2>
-      <div class="full-list" id="full-list"></div>
-    </section>
+        <!-- FULL TABLE LIST -->
+        <section class="full-list-section">
+            <h2 class="full-list-heading">All Tables</h2>
+            <div class="full-list" id="full-list"></div>
+        </section>
 
-  </div>
+    </div>
 
-  <!-- MENU TAB -->
-  <div id="tab-menu" class="tab-panel" hidden>
-    <section class="menu-section">
+    <!-- MENU TAB -->
+    <div id="tab-menu" class="tab-panel" hidden>
+        <section class="menu-section">
 
-      <div class="menu-category">
-        <h3 class="menu-category-title">Mains</h3>
-        <ul class="menu-items">
-          <li class="menu-item">
-            <span class="menu-item-name">Dan Dan Noodles</span>
-            <span class="menu-item-desc">Sesame-peanut sauce, cucumber, cilantro, crushed peanuts</span>
-          </li>
-          <li class="menu-item">
-            <span class="menu-item-name">Fried Popcorn Chicken and White Rice</span>
-            <span class="menu-item-desc">Jidori chicken, Thai basil, Taiwanese seasoning salt</span>
-            <span class="menu-item-tag">gluten free</span>
-          </li>
-        </ul>
-      </div>
+            <div class="menu-category">
+                <h3 class="menu-category-title">Mains</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="menu-item-name">Dan Dan Noodles</span>
+                        <span class="menu-item-desc">Sesame-peanut sauce, cucumber, cilantro, crushed peanuts</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-name">Fried Popcorn Chicken and White Rice</span>
+                        <span class="menu-item-desc">Jidori chicken, Thai basil, Taiwanese seasoning salt</span>
+                        <span class="menu-item-tag">gluten free</span>
+                    </li>
+                </ul>
+            </div>
 
-      <div class="menu-category">
-        <h3 class="menu-category-title">Sides</h3>
-        <ul class="menu-items">
-          <li class="menu-item">
-            <span class="menu-item-name">Clamshell Buns</span>
-            <span class="menu-item-desc">Pork belly, assorted pickles, hoisin, crushed peanuts, and cilantro</span>
-          </li>
-          <li class="menu-item">
-            <span class="menu-item-name">Beef Rolls</span>
-            <span class="menu-item-desc">Braised five spice beef shank, cucumber, cilantro, scallions, hoisin</span>
-          </li>
-        </ul>
-      </div>
+            <div class="menu-category">
+                <h3 class="menu-category-title">Sides</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="menu-item-name">Clamshell Buns</span>
+                        <span class="menu-item-desc">Pork belly, assorted pickles, hoisin, crushed peanuts, and cilantro</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-name">Beef Rolls</span>
+                        <span class="menu-item-desc">Braised five spice beef shank, cucumber, cilantro, scallions, hoisin</span>
+                    </li>
+                </ul>
+            </div>
 
-      <div class="menu-category">
-        <h3 class="menu-category-title">Veggies</h3>
-        <ul class="menu-items">
-          <li class="menu-item">
-            <span class="menu-item-name">Wok Tossed Basil Eggplant</span>
-          </li>
-          <li class="menu-item">
-            <span class="menu-item-name">Sautéed Seasonal Greens</span>
-            <span class="menu-item-desc">Bok-choy sautéed in a light garlic sauce</span>
-            <span class="menu-item-tag">gluten free &amp; vegan</span>
-          </li>
-        </ul>
-      </div>
+            <div class="menu-category">
+                <h3 class="menu-category-title">Veggies</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="menu-item-name">Wok Tossed Basil Eggplant</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-name">Sautéed Seasonal Greens</span>
+                        <span class="menu-item-desc">Bok-choy sautéed in a light garlic sauce</span>
+                        <span class="menu-item-tag">gluten free &amp; vegan</span>
+                    </li>
+                </ul>
+            </div>
 
-      <div class="menu-category">
-        <h3 class="menu-category-title">Dessert</h3>
-        <ul class="menu-items">
-          <li class="menu-item">
-            <span class="menu-item-name">Hakka Mochi</span>
-            <span class="menu-item-desc">Traditional hand cut mochi rolled in peanut and black sesame powder, drizzled with brown sugar syrup.</span>
-          </li>
-          <li class="menu-item">
-            <span class="menu-item-name">Assorted Cake</span>
-          </li>
-        </ul>
-      </div>
+            <div class="menu-category">
+                <h3 class="menu-category-title">Dessert</h3>
+                <ul class="menu-items">
+                    <li class="menu-item">
+                        <span class="menu-item-name">Hakka Mochi</span>
+                        <span class="menu-item-desc">Traditional hand cut mochi rolled in peanut and black sesame powder, drizzled with brown sugar syrup.</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-name">Assorted Cake</span>
+                    </li>
+                </ul>
+            </div>
 
-    </section>
-  </div>
+        </section>
+    </div>
 
-  <!-- THINGS TO DO TAB -->
-  <div id="tab-things" class="tab-panel" hidden>
-    <section class="things-section">
-      <ul class="things-list">
-        <li class="things-item">
-          <span class="things-item-name">Typewriter Poem</span>
-          <span class="things-item-desc">Get a custom poem written just for you by our poet.</span>
-        </li>
-        <li class="things-item">
-          <span class="things-item-name">Guest Book</span>
-          <span class="things-item-desc">Sign the guest book and leave us your well wishes and advice.</span>
-        </li>
-        <li class="things-item">
-          <span class="things-item-name">Herbal Tea Blends</span>
-          <span class="things-item-desc">Taste and take home our artisan herbal tea blends.</span>
-        </li>
-        <li class="things-item">
-          <span class="things-item-name">Quotes &amp; Poems</span>
-          <span class="things-item-desc">
-              Flip through our favorite quotes and poems while sipping tea and enjoying cookies and nuts.
-          </span>
-        </li>
-      </ul>
-    </section>
-  </div>
+    <!-- THINGS TO DO TAB -->
+    <div id="tab-things" class="tab-panel" hidden>
+        <section class="things-section">
+            <ul class="things-list">
+                <li class="things-item">
+                    <span class="things-item-name">Typewriter Poem</span>
+                    <span class="things-item-desc">Get a custom poem written just for you by our poet.</span>
+                </li>
+                <li class="things-item">
+                    <span class="things-item-name">Guest Book</span>
+                    <span class="things-item-desc">Sign the guest book and leave us your well wishes and advice.</span>
+                </li>
+                <li class="things-item">
+                    <span class="things-item-name">Herbal Tea Blends</span>
+                    <span class="things-item-desc">Taste and take home our artisan herbal tea blends.</span>
+                </li>
+                <li class="things-item">
+                    <span class="things-item-name">Quotes &amp; Poems</span>
+                    <span class="things-item-desc">
+                        Flip through our favorite quotes and poems while sipping tea and enjoying cookies and nuts.
+                    </span>
+                </li>
+            </ul>
+        </section>
+    </div>
 
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
