@@ -12,8 +12,6 @@ const GUESTS = [
   { name: "Jack Moyer", table: 2, related: [] },
     { name: "Maleah Moyer", table: 2, related: [] },
     { name: "Melvin Yee", table: 5, related: [] },
-  { name: "Michael Gould", table: 3, related: [] },
-  { name: "Audrey Gould", table: 3, related: [] },
   { name: "Will Hougen", table: 3, related: [] },
     { name: "Sabrina Hougen", table: 3, related: [] },
     { name: "Ethan McElheny", table: 3, related: [] },
